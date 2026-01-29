@@ -19,21 +19,21 @@ import Foundation
 // Utilizamos a palavra reservada "class" e na sequencia o nome do mesmo. OBS: SEMPREEE COM A PRIMEIRA LETRA MAIÚSCULA
 
 class Automovel {
-  var cor: String = "Vermelho"
-  let quantidadeDePortas: Int = 2
-  let marca: String = "Ferrari"
-  let conversivel: Bool = true
-  let modelo: String = "F40"
-  let ano: Int = 2018
-  let placa: String = "ABC-123"
-
-  func ligar() {
-    print("O carro está ligado!")
-  }
-
-  func acelerar() {
-    print("O carro está acelerando!")
-  }
+    var cor: String = "Vermelho"
+    let quantidadeDePortas: Int = 2
+    let marca: String = "Ferrari"
+    let conversivel: Bool = true
+    let modelo: String = "F40"
+    let ano: Int = 2018
+    let placa: String = "ABC-123"
+    
+    func ligar() {
+        print("O carro está ligado!")
+    }
+    
+    func acelerar() {
+        print("O carro está acelerando!")
+    }
 }
 
 // Como criar um objeto? Como posso dar VIDA ao nosso objeto?
@@ -73,19 +73,19 @@ let gabrielFerrari: Automovel = Automovel()
 
 // OBS: O self sempre será chamado quando tiver uma variável externa com o mesmo nome da propriedade de uma função por exemplo...
 class Pessoa {
-  var idade: Int
-  var nome: String
-  var altura: Double
-  var peso: Double
-  var corCabelo: String = "azul"
-
-  // Metodo construtor
-  init(idade: Int, nome: String, altura: Double, peso: Double) {
-    self.idade = idade
-    self.nome = nome
-    self.altura = altura
-    self.peso = peso
-  }
+    var idade: Int
+    var nome: String
+    var altura: Double
+    var peso: Double
+    var corCabelo: String = "azul"
+    
+    // Metodo construtor
+    init(idade: Int, nome: String, altura: Double, peso: Double) {
+        self.idade = idade
+        self.nome = nome
+        self.altura = altura
+        self.peso = peso
+    }
 }
 
 var caio: Pessoa = Pessoa(idade: 24, nome: "Caio", altura: 1.83, peso: 90.0)
@@ -95,20 +95,20 @@ var marcello: Pessoa = Pessoa(idade: 26, nome: "Marcello", altura: 1.60, peso: 9
 
 
 class Bolo {
-  var peso: Double
-  var preco: Double
-  var sabor: [String]
-  var eDoce: Bool?
-
-  init(peso: Double, preco: Double, sabor: [String]) {
-    self.peso = peso
-    self.preco = preco
-    self.sabor = sabor
-  }
-
-  func adicionarSabores(novoSabor: String) {
-    sabor.append(novoSabor)
-  }
+    var peso: Double
+    var preco: Double
+    var sabor: [String]
+    var eDoce: Bool?
+    
+    init(peso: Double, preco: Double, sabor: [String]) {
+        self.peso = peso
+        self.preco = preco
+        self.sabor = sabor
+    }
+    
+    func adicionarSabores(novoSabor: String) {
+        sabor.append(novoSabor)
+    }
 }
 
 
@@ -130,19 +130,19 @@ class Bolo {
 // print("Saldo atual: R$\(saldoAtual)")
 
 class ContaPoupanca {
-  var saldo: Double
-
-  init(saldo: Double) {
-    self.saldo = saldo
-  }
-
-  func depositar(valor: Double) {
-    saldo = saldo + valor
-  }
-
-  func consultarSaldo() -> Double {
-    return saldo
-  }
+    var saldo: Double
+    
+    init(saldo: Double) {
+        self.saldo = saldo
+    }
+    
+    func depositar(valor: Double) {
+        saldo = saldo + valor
+    }
+    
+    func consultarSaldo() -> Double {
+        return saldo
+    }
 }
 
 var minhaConta: ContaPoupanca = ContaPoupanca(saldo: 10)
@@ -166,19 +166,19 @@ minhaConta.depositar(valor: 50)
 //   Para usar este método, crie uma instância da classe, chame o método e armazene a informação retornada em uma variável. Em seguida, imprima essa variável para visualizar os detalhes do filme.
 
 class Filme {
-  var titulo: String
-  var diretor: String
-  var ano: Int
-  
-  init(titulo: String, diretor: String, ano: Int) {
-    self.titulo = titulo
-    self.diretor = diretor
-    self.ano = ano
-  }
-  
-  func exibirInfo() -> String {
-    return "Título: \(titulo), Diretor: \(diretor), Ano: \(ano)"
-  }
+    var titulo: String
+    var diretor: String
+    var ano: Int
+    
+    init(titulo: String, diretor: String, ano: Int) {
+        self.titulo = titulo
+        self.diretor = diretor
+        self.ano = ano
+    }
+    
+    func exibirInfo() -> String {
+        return "Título: \(titulo), Diretor: \(diretor), Ano: \(ano)"
+    }
 }
 
 var avatar: Filme = Filme(titulo: "Avatar", diretor: "Caio Fabrini", ano: 2026)
@@ -203,21 +203,21 @@ print(info)
 
 
 class Aluno {
-  var nome: String
-  var notas: [Double]
-  
-  init(nome: String, notas: [Double]) {
-    self.nome = nome
-    self.notas = notas
-  }
-  
-  func calcularMedia() -> Double {
-    var soma: Double = 0
-    for notaEspecificaAluno in notas {
-      soma += notaEspecificaAluno
+    var nome: String
+    var notas: [Double]
+    
+    init(nome: String, notas: [Double]) {
+        self.nome = nome
+        self.notas = notas
     }
-    return soma / Double(notas.count)
-  }
+    
+    func calcularMedia() -> Double {
+        var soma: Double = 0
+        for notaEspecificaAluno in notas {
+            soma += notaEspecificaAluno
+        }
+        return soma / Double(notas.count)
+    }
 }
 
 
@@ -230,15 +230,15 @@ print(barbara.calcularMedia())
 // Classe PAI
 
 class Animal {
-  var nome: String
-  var cor: String
-  var peso: Double
-
-  init(nome: String, cor: String, peso: Double) {
-    self.nome = nome
-    self.cor = cor
-    self.peso = peso
-  }
+    var nome: String
+    var cor: String
+    var peso: Double
+    
+    init(nome: String, cor: String, peso: Double) {
+        self.nome = nome
+        self.cor = cor
+        self.peso = peso
+    }
 }
 
 // Classe Filha (classe na qual HERDA as propriedades/ações do pai)
@@ -246,21 +246,309 @@ class Animal {
 
 
 class Gato: Animal {
-  var contemRabo: Bool = true
+    var contemRabo: Bool = true
 }
 
 var bartolomeu: Gato = Gato(nome: "Bartolomeu", cor: "Branco", peso: 5)
 
 class Cachorro: Animal {
-  var latir: Bool
-
-  init(latir: Bool, nome: String, cor: String, peso: Double) {
-    self.latir = latir
-    super.init(nome: nome, cor: cor, peso: peso)
-  }
-
+    var latir: Bool
+    
+    init(latir: Bool, nome: String, cor: String, peso: Double) {
+        self.latir = latir
+        super.init(nome: nome, cor: cor, peso: peso)
+    }
+    
 }
 
 var ayron: Cachorro = Cachorro(latir: false, nome: "Ayron", cor: "Branco", peso: 30)
 
 
+//MARK: - Encapsulamento
+// O encapsulamento é a prática de manter os detalhes de implementação de um objeto escondidos e seguros de acesso externo. Isso é feito usando modificadores de acesso para restringir o acesso às propriedades e métodos de uma classe.
+// De criar variaveis/função get e set
+// get -> pegar/acessar/consultar valor
+// set -> setar novo valor/substituir o valor atual por um novo
+// Tudo que você coloca sendo private -> ele só existe dentro daquele bloco!!
+
+
+class Computador {
+    private var armazenamento: Int
+    internal var processador: String
+    var memoriaRam: Int
+    
+    init(armazenamento: Int, processador: String, memoriaRam: Int) {
+        self.armazenamento = armazenamento
+        self.processador = processador
+        self.memoriaRam = memoriaRam
+    }
+    
+    //    função SET
+    public func melhorarArmazenamento(armazenamentoNovo: Int) {
+        if validaNovoArmazenamento(novoArmazenamento: armazenamentoNovo) {
+            armazenamento = armazenamentoNovo
+        }
+    }
+    
+    //    Função GET
+    public func getArmazenamento() -> Int {
+        return armazenamento
+    }
+    
+    private func validaNovoArmazenamento(novoArmazenamento: Int) -> Bool {
+        let eValido: Bool = armazenamento < novoArmazenamento
+        return eValido
+    }
+}
+
+
+var meuComputador: Computador = Computador(armazenamento: 1, processador: "M4", memoriaRam: 18)
+
+//Set
+//meuComputador.melhorarArmazenamento(armazenamentoNovo: 20)
+
+//Get
+//print(meuComputador.getArmazenamento())
+
+
+
+// MARK: - Polimorfismo
+// O polimorfismo permite que objetos de diferentes classes sejam tratados como objetos de uma classe comum. Em outras palavras, polimorfismo permite que um método tenha muitas "formas" diferentes, dependendo do objeto que o chama.
+// override -> sobrescrever -> substituir
+
+
+// O polimorfismo, é nada mais, nada menos que quando se tem uma classe FILHA e você quer utilizar o mesmo nome ou função da classe pai, você precisa colocar o override.
+// Segue o exemplo:
+
+
+class Veiculo {
+    var velocidadeMaxima: Int
+    
+    init(velocidadeMaxima: Int) {
+        self.velocidadeMaxima = velocidadeMaxima
+    }
+    
+    func detalheDoVeiculo() -> String {
+        return "Veiculo com velocidade maxima de \(velocidadeMaxima) km/h"
+    }
+}
+
+
+class Carro: Veiculo {
+    
+    override func detalheDoVeiculo() -> String {
+        return "Carros com velocidade maxima de \(velocidadeMaxima) km/h"
+    }
+}
+
+
+
+//Desafio 1 – Sistema de Pagamento
+//📌 Descrição
+//Você está criando um sistema que processa diferentes formas de pagamento.
+//Cada tipo de pagamento calcula a taxa de forma diferente.
+// O que precisa ser feito
+//Crie uma classe base chamada Pagamento
+//Essa classe deve ter um método calcularValorFinal(valor: Double) -> Double
+//Crie duas subclasses:
+//CartaoCredito
+//Pix
+//Cada forma de pagamento deve calcular a taxa de forma diferente:
+//Cartão de crédito: taxa de 5%
+//Pix: sem taxa
+//Crie um array do tipo [Pagamento]
+//Percorra esse array e imprima o valor final de cada pagamento
+
+// Regras
+//Use override
+//Não use if ou switch para decidir o tipo de pagamento
+
+
+
+
+//Desafio 2 – Notificações do App
+// Descrição
+//Um app envia notificações por diferentes canais.
+//Cada canal envia a mensagem de uma forma diferente.
+// O que precisa ser feito
+
+//Crie uma classe base Notificacao
+//Crie o método enviar(mensagem: String)
+//Crie pelo menos duas subclasses:
+//Email
+//SMS
+//Cada classe deve sobrescrever o método enviar
+//Armazene as notificações em um array [Notificacao]
+//Envie a mesma mensagem para todas
+
+// Regras
+//O código que envia a mensagem não pode saber qual é o tipo da notificação
+
+
+//Desafio 3 – Cofre Digital
+
+// Descrição
+//Você precisa criar um cofre digital que protege um valor armazenado.
+//🎯 O que precisa ser feito
+//Crie uma classe Cofre
+//O valor armazenado deve ser private
+//Crie métodos para:
+//Depositar valor
+//Sacar valor
+//O saque só pode acontecer se houver saldo suficiente
+//Crie um método para consultar o saldo
+
+//⚠️ Regras
+//O saldo não pode ser acessado diretamente
+//Todo acesso deve passar pelos métodos da classe
+
+
+//Desafio 4 – Usuário Seguro
+// Descrição
+//Você está criando um sistema de usuários onde a senha precisa ser protegida.
+// O que precisa ser feito
+//Crie uma classe Usuario
+//A senha deve ser private
+//A senha só pode ser alterada por um método
+//A nova senha deve ter pelo menos 6 caracteres
+//Se não for válida, a senha não deve ser alterada
+
+// Regras
+//Não permita acesso direto à senha
+//A validação deve acontecer dentro da classe
+
+
+//Desafio 5 – Funcionários da Empresa
+// Descrição
+//Uma empresa possui funcionários de tipos diferentes, e cada um tem uma forma distinta de cálculo salarial.
+// O que precisa ser feito
+//Crie uma classe base Funcionario
+//Crie um método calcularSalario() -> Double
+//Crie subclasses como:
+//CLT
+//PJ
+//Cada tipo deve calcular o salário de forma diferente
+//Armazene os funcionários em um array [Funcionario]
+//Percorra o array imprimindo o salário de cada funcionário
+//Regras
+//Use polimorfismo
+//Não use if ou switch
+//O salário não pode ser um valor público e alterável diretamente
+
+
+//MARK: - Struct
+// Com a struct, não é obrigatorio deixar o construtor de forma explicita
+// Struct NÃO ACEITA HERENÇA!!!
+// Struct aceita apenas PROTOCOLO em sua hierarquia!!
+// Struct trabalha com VALUE TYPE!!!
+
+
+struct Documento {
+    
+    var quantidadeDeFolhas: Int
+    var tipo: String
+    
+}
+
+
+var minhaCNH: Documento = Documento(quantidadeDeFolhas: 5, tipo: "Muito cara")
+var meuRG: Documento = Documento(quantidadeDeFolhas: 2, tipo: "Muito importante")
+
+
+
+
+//struct Humano {
+//    var nome: String
+//}
+//
+//var pessoa1 = Humano(nome: "Gabriel")// Objeto
+//var pessoa2 = pessoa1  // copia do VALOR
+//
+//
+//print(pessoa1.nome)//Gabriel
+//print(pessoa2.nome)//Gabriel
+//
+//pessoa2.nome = "Renato" // O Swift copiou os dados
+////São duas pessoas diferentes na memória
+//
+//print(pessoa1.nome)//Gabriel
+//print(pessoa2.nome)//Renato
+
+
+class Humano {
+    var nome: String
+    
+    init(nome: String) {
+        self.nome = nome
+    }
+}
+
+var pessoa1 = Humano(nome: "Gabriel")// Objeto
+var pessoa2 = pessoa1 // Referência para o MESMO OBJETO
+
+
+print(pessoa1.nome)//Gabriel
+print(pessoa2.nome)//Gabriel
+
+pessoa2.nome = "Renato"
+
+
+print(pessoa1.nome)//Renato
+print(pessoa2.nome)//Renato
+
+// ----------------------//---------------------
+
+//struct ContaBancaria {
+//    var saldo: Double
+//}
+//
+//var contaA = ContaBancaria(saldo: 100)
+//var contaB = contaA // Copia
+//
+//contaB.saldo = 50
+//
+//print(contaA.saldo)// 100
+//print(contaB.saldo)// 50
+
+
+
+class ContaBancaria {
+    var saldo: Double
+    
+    init(saldo: Double) {
+        self.saldo = saldo
+    }
+}
+
+var contaA = ContaBancaria(saldo: 100)
+var contaB = contaA
+
+contaB.saldo = 50
+
+print(contaA.saldo)// 50
+print(contaB.saldo)// 50
+
+
+// ----------------------//---------------------
+
+class Carro2 {
+    var modelo: String
+    
+    init(modelo: String) {
+        self.modelo = modelo
+    }
+}
+
+
+let carro1 = Carro2(modelo: "Fusca")
+let carro2 = carro1
+
+
+let carro3 = Carro2(modelo: "Ferrari")
+let carro4 = carro3
+
+
+print(carro1 === carro2)// true
+
+// === Verifica se é o mesmo OBJETO NA MEMÓRIA
+// So funciona com class
